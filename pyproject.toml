@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "etl"
+version = "0.1.0"
+description = ""
+authors = ["Philipp Gerstung <mail@philippgerstung.de>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+duckdb = "^1.0.0"
+pydantic = "^2.8.2"
+pytest = "^8.2.2"
+loguru = "^0.7.2"
+pytest-xdist = "^3.6.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "-ra -q"
+testpaths = [
+    "tests",
+]
