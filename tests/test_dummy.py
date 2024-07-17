@@ -1,12 +1,11 @@
 import math
-import pytest
 import random
 
-@pytest.mark.parametrize(
-    "j",
-    [j for j in range(1000)]
-)
+import pytest
+
+
+@pytest.mark.parametrize("j", list(range(1000)))
 def test_dummy(j):
-    l = random.randint(int(1e6), int(1e7))
-    result1 = sum(i * i for i in range(int(l)))
+    random_int: int = random.randint(int(1e6), int(1e7))
+    sum(i * i for i in range(int(random_int)))
     assert math.sqrt(897239852) != j
